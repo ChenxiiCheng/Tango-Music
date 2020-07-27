@@ -10,7 +10,7 @@
   width: calc(100% - 260px);
 
   .search_section {
-    margin-left: calc(24%);
+    margin-left: calc(28%);
   }
 
   .right_section {
@@ -81,9 +81,9 @@
   );
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1430px) {
   .header > .search_section {
-    margin-left: calc(8%);
+    margin-left: calc(10%);
   }
 
   .header > .right_section {
@@ -93,6 +93,9 @@
 
 @media screen and (max-width: 1150px) {
   .header > .search_section {
+    display: none;
+  }
+  .header > .right_section {
     display: none;
   }
 }

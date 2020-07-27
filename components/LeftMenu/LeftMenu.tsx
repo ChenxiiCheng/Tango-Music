@@ -1,9 +1,11 @@
+import Link from 'next/link';
 import {
   FaHome,
   FaSearch,
   FaRegBookmark,
   FaRegPlusSquare,
   FaRegHeart,
+  FaRegFolder,
 } from 'react-icons/fa';
 
 import styles from './LeftMenu.module.scss';
@@ -12,8 +14,12 @@ const LeftMenu = () => {
   return (
     <section className={styles.left_menu}>
       <div className={styles.logo}>
-        <img src="https://img.icons8.com/nolan/96/spotify.png" />
-        <span>Spotify</span>
+        <Link href="/">
+          <a>
+            <img src="https://img.icons8.com/nolan/96/spotify.png" />
+            <span>Spotify</span>
+          </a>
+        </Link>
       </div>
       <nav className={styles.left_menu_body}>
         <ul className={styles.link_page}>
@@ -22,6 +28,12 @@ const LeftMenu = () => {
               <FaHome />
             </span>
             Home
+          </li>
+          <li>
+            <span>
+              <FaRegFolder />
+            </span>
+            Albums
           </li>
           <li>
             <span>

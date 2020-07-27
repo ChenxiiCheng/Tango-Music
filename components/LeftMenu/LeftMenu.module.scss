@@ -1,12 +1,18 @@
 .left_menu {
   height: calc(100% - 70px);
 
-  .logo {
+  a {
+    text-decoration: none;
+    color: rgba(255, 255, 255);
+  }
+
+  .logo a {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     transform: translateX(-8px);
+
     img {
       width: 58px;
       height: 58px;

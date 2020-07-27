@@ -8,7 +8,7 @@ interface IProps {
   key: number;
 }
 
-export const SongItem = ({ data }: IProps) => {
+const SongItem = ({ data }: IProps) => {
   return (
     <div className={styles.song_item}>
       <div className={styles.cover}>
@@ -21,7 +21,7 @@ export const SongItem = ({ data }: IProps) => {
           : data.type}
       </p>
       <p>
-        {(data as resultType)
+        {(data as resultType).song
           ? (data as resultType).song.album.company
           : (data as HotSongListType).company}
       </p>
@@ -31,3 +31,5 @@ export const SongItem = ({ data }: IProps) => {
     </div>
   );
 };
+
+export default SongItem;

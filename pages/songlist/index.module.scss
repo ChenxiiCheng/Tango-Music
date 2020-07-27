@@ -1,0 +1,79 @@
+.song_list_section {
+  display: grid;
+  grid-template-areas:
+    'leftmenu header'
+    'leftmenu content'
+    'player player';
+  grid-template-columns: 260px auto;
+  grid-template-rows: 90px auto 88px;
+  height: 100vh;
+  min-height: 100%;
+
+  .header {
+    grid-area: header;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left_menu {
+    grid-area: leftmenu;
+  }
+
+  .content {
+    grid-area: content;
+    margin: 0px 0px 0px 20px;
+    padding: 0px 10px;
+
+    &_header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 0px;
+      .song_img {
+        border-radius: 10px;
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .header_body {
+        margin-left: 25px;
+
+        .creator_info {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+          }
+          span {
+            margin-left: 16px;
+            font-size: 15px;
+            color: #9d9d9d;
+            font-weight: 400;
+          }
+        }
+
+        .right_bottom {
+          & > p {
+            font-size: 14px;
+            color: #7d7d7d;
+          }
+        }
+      }
+    }
+  }
+
+  .player {
+    grid-area: player;
+    width: 100%;
+
+    & > .rhap_container {
+      background-color: #000;
+    }
+  }
+}

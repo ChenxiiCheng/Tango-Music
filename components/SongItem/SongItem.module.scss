@@ -11,6 +11,10 @@
   opacity: 0.8;
   cursor: pointer;
 
+  & > p {
+    min-width: 100px;
+  }
+
   .cover {
     overflow: hidden;
     img {

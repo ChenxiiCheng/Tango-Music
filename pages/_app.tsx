@@ -1,5 +1,8 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
+import { Provider } from 'react-redux';
+import { useStore } from '../store';
 
 // global _app.scss
 import '../styles/_app.scss';
@@ -7,6 +10,10 @@ import 'flickity/css/flickity.css';
 import 'react-h5-audio-player/src/styles.scss';
 
 function MyApp({ Component, pageProps }) {
+  const [isHomePage, setIsHomePage] = useState(true);
+  const router = useRouter();
+  const store = useStore(pageProps.initialReduxState);
+
   useEffect(() => {
     window.addEventListener('contextmenu', _preventDefault);
 
@@ -15,11 +22,24 @@ function MyApp({ Component, pageProps }) {
     };
   }, []);
 
+  useEffect(() => {
+    if (router.pathname !== '/') {
+      setIsHomePage(!isHomePage);
+    }
+  }, [router.pathname]);
+
   const _preventDefault = (event: Event) => event.preventDefault();
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Provider store={store}>
+      {isHomePage ? (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      ) : (
+        <Component {...pageProps} />
+      )}
+    </Provider>
   );
 }
 
