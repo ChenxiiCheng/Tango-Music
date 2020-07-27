@@ -1,0 +1,61 @@
+.searchbar {
+  &_input {
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    white-space: nowrap;
+    width: 360px;
+    height: 40px;
+
+    input {
+      border: 0;
+      outline: 0 none;
+      vertical-align: middle;
+      height: 40px;
+      width: 100%;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.87);
+      background-color: rgba(255, 255, 255, 0);
+    }
+
+    ::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    & > span {
+      position: absolute;
+      right: 15px;
+      top: calc(27%);
+      opacity: 0.7;
+    }
+
+    & > a {
+      position: absolute;
+      left: calc(100%);
+      top: 0;
+      display: inline-block;
+      padding: calc(9.4px) 5px 0px 4px;
+      height: 40px;
+      width: 100px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      color: rgba(255, 255, 255, 0.8);
+      background-image: linear-gradient(120deg, #111d5e, #6a097d);
+      text-align: center;
+      vertical-align: center;
+      text-decoration: none;
+
+      &:hover {
+        background-image: linear-gradient(100deg, #00bcd4, #eb6383);
+      }
+
+      & > svg {
+        margin-right: 3px;
+        transform: translateY(3px);
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.home_page {
+  transform: translateY(-20px);
+  margin: 0 20px;
+  padding: 0px 80px;
+  opacity: 0.9;
+  h4 {
+    margin-left: 20px;
+  }
+  .recommend_list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 40px;
+    row-gap: 40px;
+    padding: 0px 20px;
+  }
+  .column_song_items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    margin-right: 50px;
+    transform: translateY(-25px);
+    .song_items {
+      & > h5 {
+        font-size: 18px;
+        font-weight: 700;
+        opacity: 0.9;
+      }
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .home_page > .recommend_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .home_page > .column_song_items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home_page > .recommend_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .home_page > .recommend_list {
+    grid-template-columns: 1fr;
+  }
+}
