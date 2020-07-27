@@ -6,4 +6,4 @@
 
 ### TODO:
 
-A lot of thing, just in the beginning stag.
+A lot of thing need to do, just in the first stage.
