@@ -4,7 +4,7 @@ import { resultType, HotSongListType } from '../../pages/index';
 import styles from './SongItem.module.scss';
 
 interface IProps {
-  data: resultType & HotSongListType;
+  data: resultType | HotSongListType;
   key: number;
 }
 
@@ -15,8 +15,16 @@ export const SongItem = ({ data }: IProps) => {
         <img src={data.picUrl} alt="" />
       </div>
       <p>{data.name}</p>
-      <p>{data.song ? data.song.artists[0].name : data.type}</p>
-      <p>{data.song ? data.song.album.company : data.company}</p>
+      <p>
+        {(data as resultType).song
+          ? (data as resultType).song.artists[0].name
+          : data.type}
+      </p>
+      <p>
+        {(data as resultType)
+          ? (data as resultType).song.album.company
+          : (data as HotSongListType).company}
+      </p>
       <span>
         <FaRegHeart />
       </span>
