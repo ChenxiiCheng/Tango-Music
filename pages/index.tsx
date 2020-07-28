@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { useDispatch } from 'react-redux';
 import RecommendCard from '../components/RecommendCard';
 
@@ -71,9 +70,6 @@ const Home = ({ recommendList, newSongList, hotSongList }: IProps) => {
 
   return (
     <div className={styles.home_page}>
-      <Head>
-        <title>Home</title>
-      </Head>
       <h4>Popular Albums</h4>
       <div className={styles.recommend_list}>
         {recommendList.result.length &&
@@ -83,7 +79,7 @@ const Home = ({ recommendList, newSongList, hotSongList }: IProps) => {
       </div>
       <div className={styles.column_song_items}>
         <div className={styles.song_items}>
-          <h5>Recent History</h5>
+          <h5>Popular Music</h5>
           {newSongList.result.length &&
             newSongList.result
               .slice(0, 6)

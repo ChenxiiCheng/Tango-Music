@@ -71,12 +71,12 @@
 }
 
 .fade {
-  transform: translateY(-10rem);
-  height: 10rem;
+  transform: translateY(-11rem);
+  height: 12rem;
   background-image: linear-gradient(
     180deg,
     transparent,
-    rgba(37, 37, 37, 0.7),
+    rgba(0, 0, 37, 0.7),
     #000
   );
 }
