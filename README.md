@@ -6,4 +6,4 @@
 
 ### TODO:
 
-A lot of thing need to do, just in the first stage.
+A lot of things need to do, just in the first stage.
